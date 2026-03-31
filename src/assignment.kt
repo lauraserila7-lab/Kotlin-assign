@@ -1,5 +1,5 @@
 fun main() {
-
+//section 1
     var studentName: String = "Laura Serila"
     println("Student Name: $studentName")
 
@@ -22,16 +22,28 @@ fun main() {
     var phoneNumber: String? = null
     println("Phone Number: ${phoneNumber ?: "Not Provided"}")
 
-    displayMenu()
-}
 
+    println("Discounted price: ${calculateDiscount(100.0, 10.0)}")
+    println("Grade for 78: ${getGrade(78)}")
+    println("Is 4 even? ${isEven(4)}")
+
+    // Day of week check
+    var dayOfWeek = "Monday"
+    when (dayOfWeek) {
+        "Saturday", "Sunday" -> println("Weekend! Time to relax")
+        "Monday" -> println("Back to work")
+        "Friday" -> println("TGIF!")
+        else -> println("Regular weekday")
+    }
+}
+//section 2
 fun displayMenu() {
     println("=== MENU ===")
     println()
     println("1. View Profile")
     println("2. Edit Settings")
     println("3. Logout")
-    println("   ============")
+    println("============")
 }
 
 fun calculateDiscount(price: Double, discountPercent: Double): Double {
@@ -46,5 +58,18 @@ fun getGrade(score: Int): String {
         in 35..49 -> "D"
         else -> "F"
     }
+}
+
+fun isEven(number: Int): Boolean {
+    return number % 2 == 0
+    val trafficLight = "RED"
+
+    val trafficAction = when (trafficLight) {
+        "RED" -> "STOP"
+        "YELLOW" -> "CAUTION"
+        "GREEN" -> "GO"
+        else -> "INVALID"
+}
+    println(trafficAction)
 }
 
